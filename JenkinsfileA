@@ -17,8 +17,8 @@ node {
  sh "${mavenHome}/bin/mvn deploy"
  } 
 
- stage('DeployAppIntoTomcat'){
-  sh "cp ${WORKSPACE}/target/*.war /opt/apache-tomcat-9.0.17/webapps"
+ stage('DeployAppIntoWildfly'){
+  sh "cp ${WORKSPACE}/target/*.war /opt/wildfly-14.0.1.Final/deployments/"
  }
 }
   
