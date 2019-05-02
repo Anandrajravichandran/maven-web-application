@@ -2,7 +2,7 @@ node{
 node ('node3'){
 def mavenHome = tool name: 'maven3.6.1', type :'maven'
 stage ('checkout code'){
-git 'https://github.com/Anandrajravichandran/maven-web-application.git'
+git credentialsId: '129cd52e-60e7-4239-8fd2-06b915584e57', url: 'https://github.com/Anandrajravichandran/maven-web-application.git'
 }
 stage ('build'){
 sh "${mavenhome}/bin/clean package"
