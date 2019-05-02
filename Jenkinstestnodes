@@ -1,0 +1,13 @@
+node{
+node ('master'){
+def mavenHome = tool name: 'maven ' type :
+stage ('checkout code'){
+git
+}
+stage ('build'){
+sh "${mavenhome}/bin/clean package"
+}
+stage ('nexus'){
+sh "${mavenHome}/bin/deploy"
+}
+}
