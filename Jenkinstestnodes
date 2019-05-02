@@ -1,5 +1,5 @@
 node{
-node ('master'){
+node ('node3'){
 def mavenHome = tool name: 'maven ' type :
 stage ('checkout code'){
 git 'https://github.com/Anandrajravichandran/maven-web-application.git'
