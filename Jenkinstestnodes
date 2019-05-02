@@ -11,3 +11,4 @@ stage ('nexus'){
 sh "${mavenHome}/bin/deploy"
 }
 }
+}
